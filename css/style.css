@@ -3,3 +3,86 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+body{
+    background-color: red;
+}
+
+main{
+    margin: auto;
+    width: 80%;
+}
+
+.box,.box2{
+    padding: 4rem;
+    background-color: white;
+    margin-top: 2rem;
+    box-shadow: 5px 10px grey;
+}
+
+.flex{
+    display: flex;
+    justify-content: center;
+}
+
+.padd{
+    padding: 2rem;
+}
+
+.padd1{
+    padding: 0.5rem
+}
+
+.text-align{
+    text-align: center;
+}
+
+.red{
+    color:red
+}
+
+input{
+    border: 1px solid red
+}
+
+.white{
+    color: white;
+}
+
+input:hover{
+    background-color: red;
+}
+
+button{
+    border: none;
+    border-radius: 1rem;
+}
+
+h1{
+    padding-top: 2rem;
+}
+
+.box{
+    border-radius: 1rem;
+}
+
+.box2{
+    margin-bottom: 5rem;
+}
+
+h4{
+    padding-bottom: 2rem;
+}
+
+.passenger{
+    background-color: grey;
+}
+
+.border{
+    border-top: solid black;
+    border-bottom: solid black;
+}
+
+.d-none{
+    display: none;
+}

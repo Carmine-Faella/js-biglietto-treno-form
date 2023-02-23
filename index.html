@@ -9,59 +9,87 @@
     </head>
     <body>
 
-        <div class="box">
+        <main>
 
-            <form>
-            
-                <label for="nomeCognome">Nome Cognome</label>
-                <input type="text" id="nomeCognome">
+            <h1 class="white text-align">CALCOLA IL PREZZO DEL TUO BIGLIETTO</h1>
 
-                <label for="numeroKm">Numero Di Km</label>
-                <input type="text" id="numeroKm">
+            <div class="box">
 
-                <label for="fasciaEta">Fascia d'et&agrave;</label>
-                <select id="fasciaEta">
-                    <option id="magg" value="Maggiorenne">Maggiorenne</option>
-                    <option id="min"value="Minorenne">Minorenne</option>
-                    <option id="over" value="Over65">Over 65</option>
-                </select>
-           
-            </form>
+                <form class="flex">
 
-            <button id="leggiForm">Genera</button>
+                    <div class="padd text-align red">
 
-            <button id="resettaForm">Cancella</button>
+                        <label for="nomeCognome">Nome Cognome</label>
+                        <div><input type="text" id="nomeCognome" class="white"></div>
 
-        </div>
+                    </div>
 
-        <div>
+                    <div class="padd text-align red">
 
-            <h2>Dettagli del passeggiero</h2>
+                        <label for="numeroKm">Numero Di Km</label>
+                        <div><input type="text" id="numeroKm" class="white"></div>
 
-            <div>
-                <div>
-                    <h4>Nome passeggiero</h4>
-                    <div id="nomeCog"></div>
-                </div>
-                <div>
-                    <h4>Offerta</h4>
-                    <div></div>
-                </div>
-                <div>
-                    <h4>Carrozza</h4>
-                    <div id="carrozza"></div>
-                </div>
-                <div>
-                    <h4>Codice CP</h4>
-                    <div id="codiceCp"></div>
-                </div>
-                <div>
-                    <h4>Costo biglietto</h4>
-                    <div id="price"></div>
-                </div>
+                    </div>
+
+                    <div class="padd text-align red">
+
+                        <label for="fasciaEta">Fascia d'et&agrave;</label>
+                        <div>
+                            <select id="fasciaEta">
+                                <option id="magg" value="Maggiorenne">Maggiorenne</option>
+                                <option id="min"value="Minorenne">Minorenne</option>
+                                <option id="over" value="Over65">Over 65</option>
+                            </select>
+                        </div>
+
+                    </div>
+               
+                </form>
+
+                <div class="text-align">
+
+                    <span><button id="leggiForm" class="padd1 red">Genera</button></span>
+    
+                    <span class="padd red"><button id="resettaForm" class="padd1 red">Cancella</button></span>
+
+                </div> 
+    
             </div>
 
-        </div>
+            <h1 class="white text-align d-none" id="myTicketTitle">IL TUO BIGLIETTO</h1>
+    
+            <div class="box2 d-none" id="myTicket">
+    
+                <h2 class="text-align">Dettagli del passeggiero</h2>
+
+                <div class="flex">
+                    <div class="padd passenger border">
+                        <h4>Nome passeggiero</h4>
+                        <div id="nomeCog"></div>
+                    </div>
+                    <div class="padd border">
+                        <h4>Offerta</h4>
+                        <div></div>
+                    </div>
+                    <div class="padd border">
+                        <h4>Carrozza</h4>
+                        <div id="carrozza"></div>
+                    </div>
+                    <div class="padd border">
+                        <h4>Codice CP</h4>
+                        <div id="codiceCp"></div>
+                    </div>
+                    <div class="padd border">
+                        <h4>Costo biglietto</h4>
+                        <div id="price"></div>
+                    </div>
+                </div>
+    
+            </div>
+
+        </main>
+
+        
         
         <script style="text/javascript" src="js/main.js"></script>
 
