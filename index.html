@@ -10,6 +10,8 @@
     <body>
 
         <div class="box">
+
+            <form>
             
                 <label for="nomeCognome">Nome Cognome</label>
                 <input type="text" id="nomeCognome">
@@ -19,16 +21,16 @@
 
                 <label for="fasciaEta">Fascia d'et&agrave;</label>
                 <select id="fasciaEta">
-                    <option value="magg">Maggiorenne</option>
-                    <option value="min">Minorenne</option>
-                    <option value="over">Over 65</option>
+                    <option id="magg" value="Maggiorenne">Maggiorenne</option>
+                    <option id="min"value="Minorenne">Minorenne</option>
+                    <option id="over" value="Over65">Over 65</option>
                 </select>
            
+            </form>
 
+            <button id="leggiForm">Genera</button>
 
-            <button id="leggiForm">Leggi i valori del form</button>
-
-            <button id="resettaForm">Cancella i valori del form</button>
+            <button id="resettaForm">Cancella</button>
 
         </div>
 
