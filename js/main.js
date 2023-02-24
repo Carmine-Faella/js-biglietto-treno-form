@@ -1,41 +1,59 @@
  
-const nomeCog = document.getElementById("nomeCog");
+const nameDom = document.getElementById('nomeCognome');
 
-const prezzo = document.getElementById("price");
+const kmDom = document.getElementById("numeroKm");
 
-const carrozza = document.getElementById("carrozza")
+const ageDom = document.getElementById("fasciaEta");
 
-const codiceCp = document.getElementById("codiceCp")
+const carrozza = document.getElementById("carrozza");
 
-const numeroDiKm = document.getElementById("numeroKm").value;
+const codiceCp = document.getElementById("codiceCp");
 
-const fasciaEta = document.getElementById("fasciaEta").value;
+const nameTicket = document.getElementById("nomeCog");
+
+const prezzoTicket = document.getElementById("prezzo");
 
 const mioBiglietto = document.getElementById("myTicket");
 
 const mioBigliettoTitolo = document.getElementById("myTicketTitle");
 
+const offertaTicket = document.getElementById("offerta");
+
 const prezzoBi = 0.21;
-
-const prezzoTot = numeroDiKm.value * prezzoBi;
-
-const prezzoMinore = (prezzoTot - (prezzoTot * (20/100)));
-
-const prezzoOver = (prezzoTot - (prezzoTot * (40/100)));
 
 const domButton = document.querySelector('#leggiForm');
 
 domButton.addEventListener('click', 
     function (){
-        const nomeDom = document.getElementById('nomeCognome');
-        const nomeDelMessaggio = nomeDom.value;
-        nomeCog.innerHTML = nomeDelMessaggio; 
+        const nomeCognome = nameDom.value;
+        const numeroKm = parseInt(kmDom.value);
+        const fasciaEta = ageDom.value;
+
+        let prezzo = numeroKm * prezzoBi;
+        
+        nameTicket.innerHTML = nomeCognome;
+
         const numeroCasuale = Math.floor((Math.random() * 6)+1);
         carrozza.innerHTML = numeroCasuale;
-        const numeroCasualeCp = Math.floor((Math.random() * 99000));
+
+        const numeroCasualeCp = Math.floor(Math.random() * (100000 - 90000)) + 90000;
         codiceCp.innerHTML = numeroCasualeCp;
+
         mioBiglietto.classList.remove("d-none");
-        mioBigliettoTitolo.classlist.remove("d-none");
+        mioBigliettoTitolo.classList.remove("d-none");
+        
+        if(fasciaEta == "minorenne"){
+            prezzo = (prezzo - (prezzo / 100 * 20));
+            offertaTicket.innerHTML = 'Prezzo Minore';
+        } else if( fasciaEta == "over65"){
+            prezzo = (prezzo - (prezzo / 100 * 40));
+            offertaTicket.innerHTML = 'Prezzo Over 65';
+        } else{
+            offertaTicket.innerHTML = 'Prezzo Standard';
+        };
+
+        prezzoTicket.innerHTML = `${prezzo.toFixed(2)}`;
+        
     }
 );
 
@@ -43,12 +61,13 @@ const domReset = document.querySelector('#resettaForm');
 
 domReset.addEventListener('click', 
     function() {
-        const nomeDom = document.getElementById('nomeCognome');
-        nomeDom.value = "";
+        nameDom.value = "";
+        kmDom.value = "";
+        ageDom.value = "maggiorenne";
+
         mioBiglietto.classList.add("d-none");
         mioBigliettoTitolo.classList.add("d-none");
     } 
 );
-
 
 
