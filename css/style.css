@@ -49,8 +49,13 @@ input{
     color: white;
 }
 
+input{
+    color: black;
+}
+
 input:hover{
     background-color: red;
+    color: white;
 }
 
 button{

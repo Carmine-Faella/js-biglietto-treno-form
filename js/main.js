@@ -15,13 +15,13 @@ const mioBiglietto = document.getElementById("myTicket");
 
 const mioBigliettoTitolo = document.getElementById("myTicketTitle");
 
-let prezzoBi = 0.21;
+const prezzoBi = 0.21;
 
-let prezzoTot = numeroDiKm.value * prezzoBi;
+const prezzoTot = numeroDiKm.value * prezzoBi;
 
-let prezzoMinore = (prezzoTot - (prezzoTot * (20/100)));
+const prezzoMinore = (prezzoTot - (prezzoTot * (20/100)));
 
-let prezzoOver = (prezzoTot - (prezzoTot * (40/100)));
+const prezzoOver = (prezzoTot - (prezzoTot * (40/100)));
 
 const domButton = document.querySelector('#leggiForm');
 
