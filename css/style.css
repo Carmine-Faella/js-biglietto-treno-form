@@ -5,7 +5,8 @@
 }
 
 body{
-    background-color: red;
+    background-image: url('https://cdn-goeuro.com/static_content/web/content/panorama/frecciarossa-standard.jpg');
+    background-size:cover ;
 }
 
 main{
@@ -17,7 +18,6 @@ main{
     padding: 4rem;
     background-color: white;
     margin-top: 2rem;
-    box-shadow: 5px 10px grey;
 }
 
 .flex{
